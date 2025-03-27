@@ -1,0 +1,78 @@
+{
+  "name": "autox-super-kit",
+  "type": "module",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "dev": "cross-env My_Node_Env=dev tsx ./scripts/dev.ts",
+    "dev:prod": "cross-env My_Node_Env=prod tsx ./scripts/dev.ts",
+    "build": "cross-env My_Node_Env=prod  tsx ./scripts/build.ts",
+    "build:dev": "cross-env My_Node_Env=dev  tsx ./scripts/build.ts",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "update-git-hooks": "npx simple-git-hooks"
+  },
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.7.1",
+    "@babel/preset-env": "^7.28.5",
+    "@eslint-react/eslint-plugin": "^2.3.13",
+    "@inquirer/prompts": "^8.1.0",
+    "@rollup/plugin-babel": "^6.1.0",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/archiver": "^7.0.0",
+    "@types/lodash.clonedeep": "^4.5.9",
+    "@types/node": "^25.0.2",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@types/stream-buffers": "^3.0.8",
+    "@types/websocket": "^1.0.10",
+    "@vitejs/plugin-react": "^5.1.2",
+    "archiver": "^7.0.1",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "cross-env": "^10.1.0",
+    "eslint": "^9.39.2",
+    "eslint-plugin-format": "^1.1.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "rollup": "^4.53.3",
+    "rollup-plugin-copy": "^3.5.0",
+    "sass-embedded": "^1.96.0",
+    "simple-git-hooks": "^2.13.1",
+    "stream-buffers": "^3.0.3",
+    "terser": "^5.44.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-plugin-css-modules": "^5.2.0",
+    "unplugin": "^2.3.11",
+    "uqr": "^0.1.2",
+    "vite": "^7.2.7",
+    "vite-plugin-singlefile": "^2.3.0",
+    "websocket": "1.0.35"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "eslint --fix",
+      "prettier --parser=typescript --write"
+    ]
+  }
+}

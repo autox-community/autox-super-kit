@@ -1,0 +1,4 @@
+dist
+out
+pnpm-lock.yaml
+CHANGELOG*.md
